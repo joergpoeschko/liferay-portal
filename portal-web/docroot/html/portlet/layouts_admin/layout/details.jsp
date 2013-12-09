@@ -147,7 +147,7 @@ StringBuilder friendlyURLBase = new StringBuilder();
 		</div>
 	</c:if>
 
-	<div class="<%= selLayout.isLayoutPrototypeLinkEnabled() ? "hide" : StringPool.BLANK %>" id="<portlet:namespace />typeOptions">
+	<div class="<%= (Validator.isNotNull(selLayout.getLayoutPrototypeUuid()) && selLayout.isLayoutPrototypeLinkEnabled()) ? "hide" : StringPool.BLANK %>" id="<portlet:namespace />typeOptions">
 		<aui:select name="type">
 
 			<%
